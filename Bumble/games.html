@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bumble - Games</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 15px 25px;
+      background: #141414;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      color: #facc15;
+      font-size: 1.6rem;
+    }
+
+    .back {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    .game-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 1100px;
+      height: 85vh;
+      border: none;
+      border-radius: 12px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Bumble</h1>
+    <a href="javascript:history.back()" class="back">← Back</a>
+  </div>
+
+  <div class="game-container">
+    <iframe 
+      src="https://games.cdn.famobi.com/html5games/m/moto-x3m-pool-party/v080/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=b2102250-eb51-4704-9cab-ff296491cc68&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=681"
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bumble</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .landing {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s ease;
+    }
+
+    .landing:hover {
+      transform: scale(1.03);
+    }
+
+    .landing h1 {
+      font-size: 3.8rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+      margin-bottom: 25px;
+    }
+
+    .arrow {
+      font-size: 4.5rem;
+      color: #facc15;
+      transition: transform 0.25s ease;
+    }
+
+    .landing:hover .arrow {
+      transform: translateX(12px);
+    }
+  </style>
+</head>
+<body>
+  <div class="landing" onclick="openBumble()">
+    <h1>Bumble and play</h1>
+    <div class="arrow">→</div>
+  </div>
+
+  <script>
+    function openBumble() {
+      const win = window.open('about:blank', '_blank');
+
+      if (!win) {
+        alert('Please allow popups for this site');
+        return;
+      }
+
+      const dashboard = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bumble</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 5.5rem;
+      font-weight: 700;
+      color: #facc15;
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+    }
+
+    .welcome {
+      font-size: 1.4rem;
+      color: #a1a1aa;
+      font-weight: 400;
+    }
+
+    .dock {
+      height: 90px;
+      background: #141414;
+      border-top: 1px solid #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding-bottom: 8px;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      opacity: 0.85;
+    }
+
+    .app:hover {
+      transform: translateY(-6px);
+      opacity: 1;
+    }
+
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      background: #1f1f1f;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+      border: 1px solid #2a2a2a;
+    }
+
+    .app-label {
+      font-size: 0.8rem;
+      color: #d4d4d8;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="logo">Bumble</div>
+    <div class="welcome">Welcome back</div>
+  </div>
+
+  <div class="dock">
+    <div class="app" onclick="alert('Movies section coming soon')">
+      <div class="app-icon">🎬</div>
+      <div class="app-label">Movies</div>
+    </div>
+
+    <div class="app" onclick="window.open('games.html', '_blank')">
+      <div class="app-icon">🎮</div>
+      <div class="app-label">Games</div>
+    </div>
+
+    <div class="app" onclick="alert('Proxy section coming soon')">
+      <div class="app-icon">🌐</div>
+      <div class="app-label">Proxy</div>
+    </div>
+  </div>
+</body>
+</html>
+      `;
+
+      win.document.write(dashboard);
+      win.document.close();
+    }
+  </script>
+</body>
+</html>
